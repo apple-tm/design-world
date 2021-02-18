@@ -1,7 +1,11 @@
 package com.example.design.create.factorypattern;
 
-public class ShapeFactory {
+import com.example.design.create.abstractfactory.AbstractFactory;
+import com.example.design.create.abstractfactory.Color;
 
+public class ShapeFactory extends AbstractFactory {
+
+    @Override
     public Shape getShape(String shapeType) {
         if (shapeType == null) {
             return null;
@@ -12,6 +16,11 @@ public class ShapeFactory {
         } else if ("rectangle".equalsIgnoreCase(shapeType)) {
             return new Rectangle();
         }
+        return null;
+    }
+
+    @Override
+    public Color getColor(String colorType) {
         return null;
     }
 }
