@@ -1,7 +1,7 @@
 package com.example.design.create.single;
 
 /**
- * 懒汉式，线程不安全
+ * 懒汉式（延迟加载，第一次使用时初始化对象），线程不安全
  * 不支持多线程。因为没有加锁 synchronized，所以严格意义上它并不算单例模式。
  */
 public class SingleObject {
